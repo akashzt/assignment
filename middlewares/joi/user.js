@@ -50,7 +50,7 @@ const createUser = function (req, res, next) {
 // Method to validate update user req body
 const updateUser = function (req, res, next) {
   logger.info("Validating update user req body");
-  const validate = updateUserSchema.validate(req.body);
+  const validate = updateUserJoiSchema.validate(req.body);
   if (validate.error) {
     return resp.sendResponse(constants.response_code.BAD_REQUEST, validate.error.message, {}, res, validate.error);
   }

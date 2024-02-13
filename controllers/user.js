@@ -26,9 +26,17 @@ const createUser = async function (req, res, next) {
 };
 
 const updateUser = async function (req, res, next) {
-    const  userId  = req.param;
+    const  {userId}  = req.params;
      const body = _.pick(req.body, userProfileFields);
    try{
+    if (!(await query.findUser(userId))) {
+      logger.info(`User not found with user id = ${userId} from database`);  
+      return await resp.sendResponse(constants.response_code.NOT_FOUND, "User Id not found in database", null, res);
+    }
+      // do not allow duplicate userName in db if user want to upadte username
+      if (body.userName && !!(await query.getUserByUserName(body.userName))) {
+        return await resp.sendResponse(constants.response_code.DUPLICATE, "User Name already exist!", null, res);
+      }
     let userUpdated = await query.updateUser(userId, body);
     userUpdatedValue = _.pick(userUpdated, userProfileFields);
 
@@ -51,9 +59,14 @@ const  fetchAllUsers = async function (req, res, next) {
 }
 const findUser = async function (req, res, next) {
     try { 
-      let userId=req.params;
+      let {userId}=req.params;
       let user = await query.findUser(userId);
-    
+     // do not found userId
+     if (!user) {
+      logger.info(`User not found with user id = ${userId} from database`);  
+      return await resp.sendResponse(constants.response_code.NOT_FOUND, "User Id not found in database", null, res);
+    }
+    logger.info(`User found with user id = ${userId} from database`);
       return resp.sendResponse(constants.response_code.SUCCESS, "user get succesfully", user, res);
     } catch (err) {
       logger.info(`Error in getting user: ${err.message}`);
@@ -63,7 +76,11 @@ const findUser = async function (req, res, next) {
 
 const deleteUser = async function (req, res, next) {
     try { 
-      let userId=req.params;
+      let {userId}=req.params;
+      if (!(await query.findUser(userId))) {
+        logger.info(`User not found with user id = ${userId} from database`);  
+        return await resp.sendResponse(constants.response_code.NOT_FOUND, "User Id not found in database", null, res);
+      }
       let userDeleted = await query.deleteUser(userId);
     
       return resp.sendResponse(constants.response_code.SUCCESS, "user deleted succesfully", userDeleted, res);
