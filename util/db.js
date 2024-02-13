@@ -1,18 +1,16 @@
-const mongoose=require('mongoose');
+const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
+const connectDb = new Sequelize(process.env.DB_DATABASE, process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST,
+  dialect: 'mysql',
+  port: 3306
+});
 
-const uri = process.env.monogoDbUrl;  // connection string for our database
-const connectDb = async()=>{
-    try{
-    const conn= await mongoose.connect(uri);
+connectDb.sync().then(function () {
+  console.log('DB connection successful.');
+}, function (err) {
+  console.error(err);
+});
 
-    console.log(`mongodb connected ${conn.connection.host}`)
-    }catch(err){
-        throw err;
-    }
-}
-
-module.exports=connectDb;
-
-
+module.exports = connectDb;

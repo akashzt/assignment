@@ -69,3 +69,41 @@
 2024-02-13 14:57:48:5748 info: Validating update user req body
 2024-02-13 14:58:03:583 info: Validating update user req body
 2024-02-13 14:58:03:583 info: User not found with user id = 65cb2c3581eaed7a9d8628b9 from database
+2024-02-13 18:41:26:4126 info: Getting all Users from database
+2024-02-13 18:41:34:4134 info: Getting all Users from database
+2024-02-13 18:42:13:4213 info: Validating create user data
+2024-02-13 18:42:13:4213 info: In create User controller
+2024-02-13 18:42:13:4213 info: Query: responded with new user created: {
+  userName: 'akash121012',
+  age: 40,
+  hobbies: [ 'cricket', 'bgmi' ],
+  _id: new ObjectId('65cb6aad878a0165e5fc6737'),
+  createdAt: 2024-02-13T13:12:13.686Z,
+  updatedAt: 2024-02-13T13:12:13.687Z,
+  __v: 0
+}
+2024-02-13 18:42:22:4222 info: Getting all Users from database
+2024-02-13 21:00:18:018 info: Validating create user data
+2024-02-13 21:00:18:018 info: In create User controller
+2024-02-13 21:00:43:043 info: Validating create user data
+2024-02-13 21:00:43:043 info: In create User controller
+2024-02-13 21:00:44:044 info: Query: responded with new user created: [object SequelizeInstance:User]
+2024-02-13 21:00:56:056 info: Getting all Users from database
+2024-02-13 21:00:56:056 info: Error in viewing all users in database: User is not defined
+2024-02-13 21:01:49:149 info: Getting all Users from database
+2024-02-13 21:03:02:32 info: Getting all Users from database
+2024-02-13 21:03:40:340 info: User not found with user id = b3a42010-5e4e-4a71-9133-5800039418b5" from database
+2024-02-13 21:03:46:346 info: User found with user id = b3a42010-5e4e-4a71-9133-5800039418b5 from database
+2024-02-13 21:04:54:454 info: Error in deleting user: User is not defined
+2024-02-13 21:05:51:551 info: User not found with user id = b3a42010-5e4e-4a71-9133-5800039418b5 from database
+2024-02-13 21:07:14:714 info: Validating create user data
+2024-02-13 21:07:14:714 info: In create User controller
+2024-02-13 21:07:15:715 info: Query: responded with new user created: [object SequelizeInstance:User]
+2024-02-13 21:07:34:734 info: Validating create user data
+2024-02-13 21:07:41:741 info: Validating create user data
+2024-02-13 21:07:41:741 info: In create User controller
+2024-02-13 21:07:42:742 info: Query: responded with new user created: [object SequelizeInstance:User]
+2024-02-13 21:07:55:755 info: Getting all Users from database
+2024-02-13 21:08:19:819 info: User found with user id = f3427207-c850-40be-afc9-263c9575a38a from database
+2024-02-13 21:08:45:845 info: Validating update user req body
+2024-02-13 21:09:01:91 info: Getting all Users from database
