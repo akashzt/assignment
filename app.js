@@ -7,7 +7,7 @@ var logger = require('morgan');
 
 //import database
 const db=require("./util/db");
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/user');
 
 var app = express();
 
