@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start:dev": "nodemon ./bin/www",
-    "start:prod": "node ./bin/www"
+    "start:prod": "node ./bin/www",
+    "start:multi": "node server.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,6 +13,7 @@
     "dotenv": "^16.4.3",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "http-proxy": "^1.18.1",
     "jade": "~1.11.0",
     "joi": "^17.12.1",
     "lodash": "^4.17.21",
