@@ -15,6 +15,7 @@ I have successfully completed the CRUD API assignment as per the requirements pr
 - **start:dev:** Runs the application in development mode using nodemon.
 - **start:prod:** Starts the application in production mode after the build process.
 - **start:multi:** Starts multiple instances of the application using Node.js Cluster for horizontal scaling.
+- **test:** Test the endpoint using jest
 
 ## Instructions
 1. Clone the repository: `git clone [repository_url]`
@@ -24,12 +25,9 @@ I have successfully completed the CRUD API assignment as per the requirements pr
    - Development mode: `npm run start:dev`
    - Production mode: `npm run start:prod`
    - Multi-instance mode: `npm run start:multi`
+   - For the Test Case:`npm run test`
 5. Access the API endpoints based on the specified routes.
 
-
-## Database Options
-- MongoDB: Provides flexibility and scalability for handling complex data structures.
-- MySQL: Offers robustness and reliability for structured data storage.
 
 ## Author
 Akash Kumar
