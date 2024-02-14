@@ -5,7 +5,7 @@ const constants = require("../util/constants");
 const _ = require("lodash");
 
 
-const userProfileFields = ["_id", "userName","age","hobbies"];
+const userProfileFields = ["id", "userName","age","hobbies"];
 
 const createUser = async function (req, res, next) {
   try {
