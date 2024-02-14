@@ -29,6 +29,29 @@ I have successfully completed the CRUD API assignment as per the requirements pr
 5. Access the API endpoints based on the specified routes.
 
 
+## Environment Variables
+Before running the application, ensure you have set the following environment variables:
+
+You can set these environment variables in a `.env` file in the root directory of the project or through your system's environment variables.
+
+Example `.env` file:
+
+Env variable are:-
+
+monogoDbUrl=mongodb+srv://akash12:Akash1234@cluster0.cv5byxz.mongodb.net/?retryWrites=true&w=majority
+
+PORT=3000
+
+DB_DATABASE=sql6683921
+
+DB_USER=sql6683921
+
+DB_PASSWORD=Kzzj7rjWxH
+
+DB_HOST=sql6.freemysqlhosting.net
+
+
+
 ## Author
 Akash Kumar
 
