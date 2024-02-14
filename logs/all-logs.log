@@ -69,3 +69,17 @@
 2024-02-13 14:57:48:5748 info: Validating update user req body
 2024-02-13 14:58:03:583 info: Validating update user req body
 2024-02-13 14:58:03:583 info: User not found with user id = 65cb2c3581eaed7a9d8628b9 from database
+2024-02-14 13:20:35:2035 info: Validating create user data
+2024-02-14 13:20:35:2035 info: In create User controller
+2024-02-14 13:20:36:2036 info: Query: responded with new user created: {
+  userName: 'testuser6',
+  age: 25,
+  hobbies: [ 'reading', 'coding' ],
+  _id: new ObjectId('65cc70cc9e32a72c0928e110'),
+  createdAt: 2024-02-14T07:50:36.523Z,
+  updatedAt: 2024-02-14T07:50:36.523Z,
+  __v: 0
+}
+2024-02-14 13:20:36:2036 info: Validating update user req body
+2024-02-14 13:20:36:2036 info: User found with user id = 65cc70cc9e32a72c0928e110 from database
+2024-02-14 13:20:36:2036 info: Getting all Users from database

@@ -8,7 +8,7 @@ describe('User Controller', () => {
   it('should create a new user', async () => {
     const res = await request(app)
       .post('/api/users')
-      .send({ userName: 'testuser5', age: 25, hobbies: ['reading', 'coding'] });
+      .send({ userName: 'testuser8', age: 25, hobbies: ['reading', 'coding'] });
 
     let responce=JSON.parse(res.text)
     expect(responce.status.code).toBe(constants.response_code.SUCCESS);
